@@ -1,0 +1,23 @@
+<h1>Update Task</h1>
+
+<div>
+<%= form_for(@task) do |f| %>
+  <h2><%= f.label :title %></h2>
+  <%= f.text_field :title %>
+
+  <h3><%= f.label :details %></h3>
+  <%= f.text_field :details %>
+
+  <p><%= f.label "Mark as completed" %>
+  <%= f.check_box :completed %>
+  </p>
+  <p>
+  <%= f.submit %>
+  </p>
+<% end %>
+</div>
+
+
+<p>
+<%= link_to "Back", "/tasks"  %>
+</p>
